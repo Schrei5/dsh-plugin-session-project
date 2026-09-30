@@ -1,0 +1,51 @@
+{
+  "name": "dsh-plugin-session-project",
+  "version": "1.0.0",
+  "description": "Shows each session's project (Workspace) name under its title in the DSH sidebar's flat session list (单列表).",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "sidebar",
+    "sessions",
+    "workspace"
+  ],
+  "author": "Schrei5 <schrei@live.cn>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Schrei5/dsh-plugin-session-project.git"
+  },
+  "homepage": "https://github.com/Schrei5/dsh-plugin-session-project#readme",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

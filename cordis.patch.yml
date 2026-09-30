@@ -1,0 +1,6 @@
+# This bundle's patch layer: one row for the plugin itself. The row's package
+# specifier is resolved from the profile that installed this bundle, and the
+# same package's `dsh.client` declaration publishes `./client` to the browser.
+- insert:
+    - id: session-project-label
+      name: dsh-plugin-session-project
